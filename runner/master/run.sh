@@ -83,7 +83,7 @@ export TESTTORUN="${TESTTORUN:-phpunit}"
 # Todo: Tidy this up properly.
 export DBTYPE="${DBTYPE:-pgsql}"
 export DBTORUN="${DBTORUN:-}"
-export DBSLAVES="${DBSLAVES:-0}"
+export DBSLAVES="${DBSLAVES:-1}"
 
 # Test defaults
 export BROWSER="${BROWSER:-chrome}"
