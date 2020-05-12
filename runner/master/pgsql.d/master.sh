@@ -24,6 +24,14 @@ chown -R postgres:postgres "${ARCHIVEDIR}"
 
 # Configure the postgresql.conf for hot standby and more logging.
 cat << EOF >> $CONFFILE
+
+shared_buffers = 2GB
+work_mem = 128MB
+maintenance_work_mem = 256MB
+effective_cache_size = 4GB
+checkpoint_completion_target = 0.1
+bgwriter_lru_maxpages = 0
+
 wal_level = hot_standby
 synchronous_commit = local
 archive_mode = on

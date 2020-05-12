@@ -56,7 +56,6 @@ echo "Configuring $CONFFILE as a slave"
 cat << EOF >> $CONFFILE
 hot_standby = on
 
-#log_statement = 'all'
 log_directory = 'pg_log'
 log_filename = 'postgres.log'
 logging_collector = on
